@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Quasipedia</title><link href="http://quasipedia.com/" rel="alternate"></link><link href="http://quasipedia.com/feeds/tag-github.atom.xml" rel="self"></link><id>http://quasipedia.com/</id><updated>2013-05-26T00:00:00+02:00</updated><entry><title>Static blogs with Python and GitHub</title><link href="http://quasipedia.com/posts/2013/05/26/blog-with-python-and-github/" rel="alternate"></link><updated>2013-05-26T00:00:00+02:00</updated><author><name>Mac Ryan</name></author><id>tag:quasipedia.com,2013-05-26:posts/2013/05/26/blog-with-python-and-github/</id><summary type="html">&lt;p&gt;I have been on and off keeping a blog well before the term was coined.  My
+on-line presence started with hand-written &lt;span class="caps"&gt;HTML&lt;/span&gt; using_notepad for
+&lt;a href="http://en.wikipedia.org/wiki/Windows_3.0"&gt;windows 3.0&lt;/a&gt;&lt;em&gt;, then &lt;span class="caps"&gt;HTML&lt;/span&gt; 2.0 came out and I start experimenting with
+&lt;/em&gt;&lt;a href="http://en.wikipedia.org/wiki/HoTMetaL"&gt;HoTMetaL&lt;/a&gt;&lt;em&gt; and &lt;/em&gt;&lt;a href="http://en.wikipedia.org/wiki/HotDog"&gt;HotDog&lt;/a&gt;&lt;em&gt; (among the first &lt;span class="caps"&gt;HTML&lt;/span&gt; editors on the market).
+Then it came &lt;/em&gt;&lt;a href="http://en.wikipedia.org/wiki/GeoCities"&gt;GeoCities&lt;/a&gt;&lt;em&gt;, and when I got my fist domain I started using 
+dynamic sites, using &lt;/em&gt;&lt;a href="http://en.wikipedia.org/wiki/Movable_Type"&gt;Movable Type&lt;/a&gt;&lt;em&gt; at first, then &lt;/em&gt;&lt;a href="http://en.wikipedia.org/wiki/WordPress"&gt;WordPress&lt;/a&gt;&lt;em&gt; and
+later on &lt;/em&gt;&lt;a href="http://en.wikipedia.org/wiki/Drupal"&gt;Drupal&lt;/a&gt;_.&lt;/p&gt;
+&lt;p&gt;But if there is one thing that all this technological wandering taught me, is
+that I seldom if ever use dynamic features on my sites: the only facility
+important to me is the possibility to generate feeds and tag pages
+automatically.  Besides, a dynamic sites means more maintenance, and more
+hosting&amp;nbsp;costs.&lt;/p&gt;
+&lt;h2&gt;Go&amp;nbsp;static&lt;/h2&gt;
+&lt;p&gt;So, this time around I started looking for some simple and lean tool, that
+would generate static pages that I could push up to some repository server
+(like &lt;a href="http://bitbucket.org/"&gt;Bitbucket&lt;/a&gt; or &lt;a href="http://github.com/"&gt;Github&lt;/a&gt;), without having to worry about server
+maintenance and security patches.&amp;nbsp;Ever.&lt;/p&gt;
+&lt;p&gt;Given the rise of GitHub to a prominent actor in this kind of solutions, I 
+obviously started my quest by looking into &lt;a href="http://jekyllrb.com/"&gt;Jeckyll&lt;/a&gt; and to the very nice
+&lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt;.  No doubt these are very excellent solutions, but - at least
+for me - they have two major&amp;nbsp;drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They are based on ruby, which is a language that completely fails to
+    intrigue me (don&amp;#8217;t take this as a judgement on the language in itself,
+    though: it&amp;#8217;s just my personal&amp;nbsp;taste!).&lt;/li&gt;
+&lt;li&gt;To leverage the integration with GitHub to its best, you should have the
+    &lt;em&gt;source&lt;/em&gt; of your site available on a GitHub repository (and the free
+    account on GitHub only allows for public&amp;nbsp;repository).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I would have rather chosen a &lt;strong&gt;python-based&lt;/strong&gt; solution, provided it would have
+been &lt;strong&gt;actively maintained&lt;/strong&gt;, and supporting the &lt;strong&gt;&lt;a href="http://en.wikipedia.org/wiki/Markdown"&gt;markdown syntax&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+Documentation too had to be extensive and well&amp;nbsp;organised.&lt;/p&gt;
+&lt;h2&gt;Meet&amp;nbsp;Pelican&lt;/h2&gt;
+&lt;p&gt;Lo and behold, after having considered a few alternatives, I settled for
+&lt;strong&gt;&lt;a href="http://docs.getpelican.com"&gt;Pelican&lt;/a&gt;&lt;/strong&gt; of which - I must confess - I never heard&amp;nbsp;before.&lt;/p&gt;
+&lt;p&gt;The&amp;nbsp;pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The underlying technologies are &lt;strong&gt;python&lt;/strong&gt;, &lt;strong&gt;markdown&lt;/strong&gt; and &lt;strong&gt;jinja2&lt;/strong&gt;.
+    The best of the breed, at least for&amp;nbsp;me.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stable&lt;/strong&gt;, and adopted widely enough to have its little community of
+    contributors (and themes, and&amp;nbsp;plugins&amp;#8230;)&lt;/li&gt;
+&lt;li&gt;Very &lt;strong&gt;well documented&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Active&lt;/strong&gt;: the last commit was days before I started working on this&amp;nbsp;project.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flexible organisation&lt;/strong&gt; of your source&amp;nbsp;files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Small but sensible set of feature&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The cons (or at least the few glitches that I have met so&amp;nbsp;far):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Poor support for Python3&lt;/strong&gt; (according to the documentation it should have
+    worked out-of-the-box, but in reality it did not work at all for&amp;nbsp;me).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compulsory use of categories&lt;/strong&gt;: these are internal to the logic of
+    Pelican, beside the possibility to use tags. In a perfect world, I would
+    have very much preferred to have an abstract taxonomy that could represent
+    both categories and&amp;nbsp;tags.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Non-intuitive naming convention&lt;/strong&gt;: for example, the file holding the
+    configuration used in development is called &lt;code&gt;pelicanconf.py&lt;/code&gt;, while the
+    one use for producing the &amp;#8220;deployable&amp;#8221; pages is called &lt;code&gt;publishconf.py&lt;/code&gt;.
+    (I would have considered &lt;code&gt;devel-conf.py&lt;/code&gt; and &lt;code&gt;prod-conf.py&lt;/code&gt; more apt
+    names). But also the makefile targets: &lt;code&gt;devserver&lt;/code&gt; is the target to start
+    the server, but &lt;code&gt;stopserver&lt;/code&gt; is the one for stopping&amp;nbsp;it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Helpers are half-backed and inconsistent&lt;/strong&gt;. For one, there are a couple
+    of Makefiles and shell scripts tossed around for no good reason: a python
+    script would have resulted in much simpler and cleaner code. Besides,
+    scripts like &lt;code&gt;pelican-quickstart&lt;/code&gt; offers support on certain areas where
+    one probably would feel safe to do stuff manually (pushing the site live),
+    but misses out on important ones like installing extra themes or&amp;nbsp;plugins.&lt;/li&gt;
+&lt;li&gt;There are &lt;strong&gt;very few good themes&lt;/strong&gt;, and the few that look nice are not&amp;nbsp;responsive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;For those interested in trying out a similar setup to mine, here&amp;#8217;s a breakdown
+of my directory&amp;nbsp;layout:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;.                            [1]
+├── content
+│   ├── extra                [2]
+│   ├── images
+│   └── pages
+├── develop_server.sh
+├── Makefile
+├── output                   [3]
+├── pelicanconf.py
+├── pelicanconf.pyc
+├── plugins                  [4a]
+├── publishconf.py
+├── publishconf.pyc
+└── themes                   [4b]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[1]&lt;/code&gt;: This is the main repository (in my case a private&amp;nbsp;repository)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[2]&lt;/code&gt;: Certain files, like &lt;code&gt;robot.txt&lt;/code&gt; needs to be copied verbatim every
+    time the site is generated. I stored such files here and used the
+    &lt;code&gt;FILES_TO_COPY&lt;/code&gt; setting to make pelican aware of&amp;nbsp;it.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[3]&lt;/code&gt;: This is the directory where the static pages are generated. I set
+    this to be an ignored directory for the main repo at &lt;a href="http://en.wikipedia.org/wiki/Windows_3.0"&gt;1&lt;/a&gt; and within it
+    I cloned my github pages repo (i.e.: the repo, to which I have to push
+    every time I want to to publish a new version of the site). See below for
+    more&amp;nbsp;details.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[4]&lt;/code&gt;: Both of these directories are git &amp;#8220;submodules&amp;#8221;, linked to the themes
+    and plugins repositories. In other words: these are &amp;#8220;sub-repositories&amp;#8221;. See
+    below for more&amp;nbsp;details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Git&amp;nbsp;magic&lt;/h2&gt;
+&lt;p&gt;It took me a couple of attempts before getting this right, but this is the 
+key two concept to keep in mind in the above&amp;nbsp;configuration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When invoking a git command, git will progressively look &amp;#8220;one directory up&amp;#8221;
+    until it will find a valid repository (a &lt;code&gt;.git&lt;/code&gt; directory). So, &lt;strong&gt;it is
+    possible to nest Git repositories&lt;/strong&gt; and treat them independently, but one
+    will have to:&lt;ul&gt;
+&lt;li&gt;Tell the container repo to ignore the directory where the contained one&amp;nbsp;lives.&lt;/li&gt;
+&lt;li&gt;Move to the contained repo every time a command need to be issued for
+  that specific repository.
+Essentially, the two repository will not even be aware of the existence of
+the other&amp;nbsp;one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Submodules are a different story&lt;/strong&gt;: the repositories marked as submodules
+    are known to their container. In fact, commits in the main repository 
+    contain information on what commit is checked out in each submodule.
+    This is very convenient, as - given a master repository called &lt;code&gt;foobar&lt;/code&gt;,
+    one can issue &lt;code&gt;g clone --recursive foobar&lt;/code&gt; and all submodules will be
+    checked out correctly, too. You can read more on submodules &lt;a href="http://git-scm.com/book/en/Git-Tools-Submodules"&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you have suggestions for a novice pelican user, you are welcome to leave
+them in the comments below!&amp;nbsp;:)&lt;/p&gt;</summary><category term="python"></category><category term="pelican"></category><category term="github"></category><category term="markdown"></category><category term="git"></category><category term="git-submodules"></category><category term="jinja2"></category></entry></feed>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Quasipedia - git-submodules</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="http://quasipedia.com/theme/css/main.css" type="text/css" />
+        <link href="http://quasipedia.com/" type="application/atom+xml" rel="alternate" title="Quasipedia ATOM Feed" />
+        
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://quasipedia.com/css/ie.css"/>
+                <script src="http://quasipedia.com/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://quasipedia.com/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://quasipedia.com/index.html">Quasipedia </a></h1>
+                <nav><ul>
+                                                                    <li ><a href="http://quasipedia.com/pages/about.html">About</a></li>
+                                                <li><a href="http://quasipedia.com/">Archives</a></li>
+                                </ul></nav>
+        </header><!-- /#banner -->
+
+                 <section id="content" class="body">
+        <aside id="featured"><article>
+                <h1 class="entry-title"><a href="http://quasipedia.com/posts/2013/05/26/blog-with-python-and-github/">Static blogs with Python and&nbsp;GitHub</a></h1>
+                <footer class="post-info">
+        <abbr class="published" title="2013-05-26T00:00:00">
+                26 May 2013 (Sunday)
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="http://quasipedia.com/author/mac-ryan.html">Mac Ryan</a>
+        </address>
+        <p>In <a href="http://quasipedia.com/category/blogging.html">Blogging</a>. </p>
+<p>tags: <a href="http://quasipedia.com/tag/python.html">python</a><a href="http://quasipedia.com/tag/pelican.html">pelican</a><a href="http://quasipedia.com/tag/github.html">github</a><a href="http://quasipedia.com/tag/markdown.html">markdown</a><a href="http://quasipedia.com/tag/git.html">git</a><a href="http://quasipedia.com/tag/git-submodules.html">git-submodules</a><a href="http://quasipedia.com/tag/jinja2.html">jinja2</a></p></p></footer><!-- /.post-info --><!-- /.post-info -->
+                <p>I have been on and off keeping a blog well before the term was coined.  My
+on-line presence started with hand-written <span class="caps">HTML</span> using_notepad for
+<a href="http://en.wikipedia.org/wiki/Windows_3.0">windows 3.0</a><em>, then <span class="caps">HTML</span> 2.0 came out and I start experimenting with
+</em><a href="http://en.wikipedia.org/wiki/HoTMetaL">HoTMetaL</a><em> and </em><a href="http://en.wikipedia.org/wiki/HotDog">HotDog</a><em> (among the first <span class="caps">HTML</span> editors on the market).
+Then it came </em><a href="http://en.wikipedia.org/wiki/GeoCities">GeoCities</a><em>, and when I got my fist domain I started using 
+dynamic sites, using </em><a href="http://en.wikipedia.org/wiki/Movable_Type">Movable Type</a><em> at first, then </em><a href="http://en.wikipedia.org/wiki/WordPress">WordPress</a><em> and
+later on </em><a href="http://en.wikipedia.org/wiki/Drupal">Drupal</a>_.</p>
+<p>But if there is one thing that all this technological wandering taught me, is
+that I seldom if ever use dynamic features on my sites: the only facility
+important to me is the possibility to generate feeds and tag pages
+automatically.  Besides, a dynamic sites means more maintenance, and more
+hosting&nbsp;costs.</p>
+<h2>Go&nbsp;static</h2>
+<p>So, this time around I started looking for some simple and lean tool, that
+would generate static pages that I could push up to some repository server
+(like <a href="http://bitbucket.org/">Bitbucket</a> or <a href="http://github.com/">Github</a>), without having to worry about server
+maintenance and security patches.&nbsp;Ever.</p>
+<p>Given the rise of GitHub to a prominent actor in this kind of solutions, I 
+obviously started my quest by looking into <a href="http://jekyllrb.com/">Jeckyll</a> and to the very nice
+<a href="http://octopress.org/">Octopress</a>.  No doubt these are very excellent solutions, but - at least
+for me - they have two major&nbsp;drawbacks:</p>
+<ul>
+<li>They are based on ruby, which is a language that completely fails to
+    intrigue me (don&#8217;t take this as a judgement on the language in itself,
+    though: it&#8217;s just my personal&nbsp;taste!).</li>
+<li>To leverage the integration with GitHub to its best, you should have the
+    <em>source</em> of your site available on a GitHub repository (and the free
+    account on GitHub only allows for public&nbsp;repository).</li>
+</ul>
+<p>I would have rather chosen a <strong>python-based</strong> solution, provided it would have
+been <strong>actively maintained</strong>, and supporting the <strong><a href="http://en.wikipedia.org/wiki/Markdown">markdown syntax</a></strong>.<br />
+Documentation too had to be extensive and well&nbsp;organised.</p>
+<h2>Meet&nbsp;Pelican</h2>
+<p>Lo and behold, after having considered a few alternatives, I settled for
+<strong><a href="http://docs.getpelican.com">Pelican</a></strong> of which - I must confess - I never heard&nbsp;before.</p>
+<p>The&nbsp;pros:</p>
+<ul>
+<li>The underlying technologies are <strong>python</strong>, <strong>markdown</strong> and <strong>jinja2</strong>.
+    The best of the breed, at least for&nbsp;me.</li>
+<li><strong>Stable</strong>, and adopted widely enough to have its little community of
+    contributors (and themes, and&nbsp;plugins&#8230;)</li>
+<li>Very <strong>well documented</strong>.</li>
+<li><strong>Active</strong>: the last commit was days before I started working on this&nbsp;project.</li>
+<li><strong>Flexible organisation</strong> of your source&nbsp;files.</li>
+<li><strong>Small but sensible set of feature</strong>.</li>
+</ul>
+<p>The cons (or at least the few glitches that I have met so&nbsp;far):</p>
+<ul>
+<li><strong>Poor support for Python3</strong> (according to the documentation it should have
+    worked out-of-the-box, but in reality it did not work at all for&nbsp;me).</li>
+<li><strong>Compulsory use of categories</strong>: these are internal to the logic of
+    Pelican, beside the possibility to use tags. In a perfect world, I would
+    have very much preferred to have an abstract taxonomy that could represent
+    both categories and&nbsp;tags.</li>
+<li><strong>Non-intuitive naming convention</strong>: for example, the file holding the
+    configuration used in development is called <code>pelicanconf.py</code>, while the
+    one use for producing the &#8220;deployable&#8221; pages is called <code>publishconf.py</code>.
+    (I would have considered <code>devel-conf.py</code> and <code>prod-conf.py</code> more apt
+    names). But also the makefile targets: <code>devserver</code> is the target to start
+    the server, but <code>stopserver</code> is the one for stopping&nbsp;it.</li>
+<li><strong>Helpers are half-backed and inconsistent</strong>. For one, there are a couple
+    of Makefiles and shell scripts tossed around for no good reason: a python
+    script would have resulted in much simpler and cleaner code. Besides,
+    scripts like <code>pelican-quickstart</code> offers support on certain areas where
+    one probably would feel safe to do stuff manually (pushing the site live),
+    but misses out on important ones like installing extra themes or&nbsp;plugins.</li>
+<li>There are <strong>very few good themes</strong>, and the few that look nice are not&nbsp;responsive.</li>
+</ul>
+<h2>Configuration</h2>
+<p>For those interested in trying out a similar setup to mine, here&#8217;s a breakdown
+of my directory&nbsp;layout:</p>
+<div class="highlight"><pre>.                            [1]
+├── content
+│   ├── extra                [2]
+│   ├── images
+│   └── pages
+├── develop_server.sh
+├── Makefile
+├── output                   [3]
+├── pelicanconf.py
+├── pelicanconf.pyc
+├── plugins                  [4a]
+├── publishconf.py
+├── publishconf.pyc
+└── themes                   [4b]
+</pre></div>
+
+
+<ul>
+<li><code>[1]</code>: This is the main repository (in my case a private&nbsp;repository)</li>
+<li><code>[2]</code>: Certain files, like <code>robot.txt</code> needs to be copied verbatim every
+    time the site is generated. I stored such files here and used the
+    <code>FILES_TO_COPY</code> setting to make pelican aware of&nbsp;it.</li>
+<li><code>[3]</code>: This is the directory where the static pages are generated. I set
+    this to be an ignored directory for the main repo at <a href="http://en.wikipedia.org/wiki/Windows_3.0">1</a> and within it
+    I cloned my github pages repo (i.e.: the repo, to which I have to push
+    every time I want to to publish a new version of the site). See below for
+    more&nbsp;details.</li>
+<li><code>[4]</code>: Both of these directories are git &#8220;submodules&#8221;, linked to the themes
+    and plugins repositories. In other words: these are &#8220;sub-repositories&#8221;. See
+    below for more&nbsp;details.</li>
+</ul>
+<h2>Git&nbsp;magic</h2>
+<p>It took me a couple of attempts before getting this right, but this is the 
+key two concept to keep in mind in the above&nbsp;configuration:</p>
+<ul>
+<li>When invoking a git command, git will progressively look &#8220;one directory up&#8221;
+    until it will find a valid repository (a <code>.git</code> directory). So, <strong>it is
+    possible to nest Git repositories</strong> and treat them independently, but one
+    will have to:<ul>
+<li>Tell the container repo to ignore the directory where the contained one&nbsp;lives.</li>
+<li>Move to the contained repo every time a command need to be issued for
+  that specific repository.
+Essentially, the two repository will not even be aware of the existence of
+the other&nbsp;one.</li>
+</ul>
+</li>
+<li><strong>Submodules are a different story</strong>: the repositories marked as submodules
+    are known to their container. In fact, commits in the main repository 
+    contain information on what commit is checked out in each submodule.
+    This is very convenient, as - given a master repository called <code>foobar</code>,
+    one can issue <code>g clone --recursive foobar</code> and all submodules will be
+    checked out correctly, too. You can read more on submodules <a href="http://git-scm.com/book/en/Git-Tools-Submodules">here</a>.</li>
+</ul>
+<p>If you have suggestions for a novice pelican user, you are welcome to leave
+them in the comments below!&nbsp;:)</p>
+        </article></aside><!-- /#featured -->
+            </ol><!-- /#posts-list -->
+</section><!-- /#content -->
+
+        <aside id="sidebar">
+                <div class="widget">
+                        <h2>Categories</h2>
+                        <ul>
+                                                   <li ><a href="http://quasipedia.com/category/blogging.html">Blogging</a></li>
+                                                </ul>
+                </div>
+                                <div class="widget social">
+                        <h2>Social</h2>
+                        <ul>
+                            <li><a href="http://quasipedia.com/" rel="alternate">atom feed</a></li>
+                            
+                                                    <li><a href="https://github.com/quasipedia">GitHub</a></li>
+                                                    <li><a href="http://stackoverflow.com/users/146792/mac">StackOverflow</a></li>
+                                                </ul>
+                </div><!-- /.social -->
+                </aside><!-- /#sidebar -->
+
+        <footer id="footer" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is «notmyidea-cms», a modified version of «notmyidea», the default theme.</p>
+        </footer><!-- /#footer -->
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-41219970-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+</body>
+</html>
