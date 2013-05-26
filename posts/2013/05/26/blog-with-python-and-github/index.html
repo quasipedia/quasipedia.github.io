@@ -114,34 +114,34 @@ Documentation too had to be extensive and well&nbsp;organised.</p>
 <h2>Configuration</h2>
 <p>For those interested in trying out a similar setup to mine, here&#8217;s a breakdown
 of my directory&nbsp;layout:</p>
-<div class="highlight"><pre>.                            [1]
+<div class="highlight"><pre>.                            (1)
 ├── content
-│   ├── extra                [2]
+│   ├── extra                (2)
 │   ├── images
 │   └── pages
 ├── develop_server.sh
 ├── Makefile
-├── output                   [3]
+├── output                   (3)
 ├── pelicanconf.py
 ├── pelicanconf.pyc
-├── plugins                  [4a]
+├── plugins                  (4a)
 ├── publishconf.py
 ├── publishconf.pyc
-└── themes                   [4b]
+└── themes                   (4b)
 </pre></div>
 
 
 <ul>
-<li><code>[1]</code>: This is the main repository (in my case a private&nbsp;repository)</li>
-<li><code>[2]</code>: Certain files, like <code>robot.txt</code> needs to be copied verbatim every
+<li><code>(1)</code>: This is the main repository (in my case a private&nbsp;repository)</li>
+<li><code>(2)</code>: Certain files, like <code>robot.txt</code> needs to be copied verbatim every
     time the site is generated. I stored such files here and used the
     <code>FILES_TO_COPY</code> setting to make pelican aware of&nbsp;it.</li>
-<li><code>[3]</code>: This is the directory where the static pages are generated. I set
-    this to be an ignored directory for the main repo at <a href="http://en.wikipedia.org/wiki/Windows_3.0">1</a> and within it
+<li><code>(3)</code>: This is the directory where the static pages are generated. I set
+    this to be an ignored directory for the main repo at (1) and within it
     I cloned my github pages repo (i.e.: the repo, to which I have to push
     every time I want to to publish a new version of the site). See below for
     more&nbsp;details.</li>
-<li><code>[4]</code>: Both of these directories are git &#8220;submodules&#8221;, linked to the themes
+<li><code>(4)</code>: Both of these directories are git &#8220;submodules&#8221;, linked to the themes
     and plugins repositories. In other words: these are &#8220;sub-repositories&#8221;. See
     below for more&nbsp;details.</li>
 </ul>
@@ -177,7 +177,7 @@ them in the comments below!&nbsp;:)</p>
                var disqus_identifier = "posts/2013/05/26/blog-with-python-and-github/";
                (function() {
                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-               dsq.src = 'http://quasipedia.disqus.com.disqus.com/embed.js';
+               dsq.src = 'http://quasipedia.disqus.com/embed.js';
                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
               })();
             </script>
