@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://quasipedia.com/index.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/archives.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/tags.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/categories.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/pages/about.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -47,63 +47,63 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://quasipedia.com/category/blogging.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/tag/pelican.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/tag/github.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/tag/python.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/tag/git-submodules.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/tag/markdown.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/tag/jinja2.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/tag/git.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://quasipedia.com/author/mac-ryan.html</loc>
-<lastmod>2013-05-27T01:36:21-00:00</lastmod>
+<lastmod>2013-05-27T01:41:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
